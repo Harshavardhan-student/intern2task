@@ -1,0 +1,30 @@
+<section class="contact">
+    <h2 class="section-title">📞 Contact Information</h2>
+    <div class="contact-card">
+        <div class="contact-info">
+            <h3>Your Supervisor</h3>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="contact-label">👤 Name:</span>
+                    <span class="contact-value">{{ contact.supervisor }}</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">📧 Email:</span>
+                    <a href="mailto:{{ contact.email }}" class="contact-link">{{ contact.email }}</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">💬 Slack:</span>
+                    <span class="contact-value">{{ contact.slack }}</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">🏢 Office:</span>
+                    <span class="contact-value">{{ contact.office }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="contact-cta">
+            <p>Have questions? Don't hesitate to reach out!</p>
+            <a href="mailto:{{ contact.email }}" class="btn btn-primary">Send Email</a>
+        </div>
+    </div>
+</section>

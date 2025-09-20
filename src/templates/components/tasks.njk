@@ -1,0 +1,30 @@
+<section class="tasks">
+    <h2 class="section-title">📋 Internship Tasks</h2>
+    <div class="tasks-grid">
+        {% for task in tasks %}
+        <div class="task-card">
+            <div class="task-header">
+                <h3 class="task-title">{{ task.title }}</h3>
+                <span class="priority priority-{{ task.priority.lower() }}">{{ task.priority }}</span>
+            </div>
+            <p class="task-description">{{ task.description }}</p>
+            <div class="task-deadline">
+                <span class="deadline-label">📅 Deadline:</span>
+                <span class="deadline-date">{{ task.deadline }}</span>
+            </div>
+            <div class="requirements">
+                <h4 class="requirements-title">Requirements:</h4>
+                <ul class="requirements-list">
+                    {% for requirement in task.requirements %}
+                    <li>{{ requirement }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="task-actions">
+                <button class="btn btn-primary">Start Task</button>
+                <button class="btn btn-secondary">View Details</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

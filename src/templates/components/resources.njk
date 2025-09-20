@@ -1,0 +1,18 @@
+<section class="resources">
+    <h2 class="section-title">📚 Resources & Links</h2>
+    <div class="resources-grid">
+        {% for resource in resources %}
+        <div class="resource-card">
+            <h3 class="resource-title">
+                <a href="{{ resource.url }}" target="_blank" rel="noopener noreferrer">
+                    {{ resource.name }}
+                </a>
+            </h3>
+            <p class="resource-description">{{ resource.description }}</p>
+            <a href="{{ resource.url }}" class="resource-link" target="_blank" rel="noopener noreferrer">
+                Visit Resource →
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
